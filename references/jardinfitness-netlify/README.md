@@ -9,7 +9,7 @@ Le site se présente comme une démonstration « JH Fitness Club » préparée p
 - `club-exterior.jpg` : photographie 1100 × 825, texte alternatif du site « Enseigne JH Fitness Club sur le mur végétalisé ».
 - `source-logo.png` : image 700 × 330 utilisée deux fois comme logo sur le site. L'image récupérée apparaît comme un rectangle beige sans logo visible, comme la pièce jointe du propriétaire. Elle n'est donc pas utilisée pour remplacer le symbole actuel.
 
-Ces fichiers proviennent des images intégrées à la page, avec autorisation du propriétaire de les prendre comme références. Ils sont conservés ici pour réutilisation ; aucun changement visuel n'a été appliqué à l'application.
+Ces fichiers proviennent des images intégrées à la page, avec autorisation du propriétaire de les prendre comme références. À sa demande, la photographie est également copiée dans `public/assets/club/club-exterior.jpg` et utilisée pour le visuel principal et le bandeau du site public. Le remplacement du logo et la reproduction exacte du design de carte attendent une référence lisible.
 
 ## Tarifs relevés et correspondance avec les offres existantes
 
