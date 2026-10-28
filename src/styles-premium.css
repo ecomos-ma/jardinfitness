@@ -1,0 +1,74 @@
+.membership-card-component{width:100%;min-width:0}
+.membership-card-shell{position:relative;width:100%;aspect-ratio:1.586;perspective:1500px;filter:drop-shadow(0 20px 24px #102b2533);border-radius:25px;isolation:isolate;transition:filter .3s ease}
+.membership-card-shell:hover{filter:drop-shadow(0 26px 30px #102b2540)}
+.membership-card-flipper{position:relative;width:100%;height:100%;transform-style:preserve-3d;border-radius:25px}
+.membership-card-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:25px;overflow:hidden}
+.membership-card-face svg{display:block;width:100%;height:100%;border-radius:inherit}
+.membership-card-back{transform:rotateY(180deg)}
+.membership-card-sheen{position:absolute;inset:0;border-radius:25px;pointer-events:none;background:radial-gradient(ellipse 45% 60% at var(--card-x,50%) var(--card-y,50%),#ffffff18,transparent 78%);mix-blend-mode:screen;opacity:.78;transition:opacity .3s ease;z-index:2}
+.membership-card-compact{max-width:310px;margin:auto}
+.membership-card-standard{max-width:470px;margin:0 auto}
+.membership-card-large{max-width:680px;margin:0 auto}
+.membership-card-controls{margin-top:24px;display:flex;flex-direction:column;align-items:center;gap:13px}
+.membership-side-switch{display:inline-flex;align-items:center;gap:2px;padding:4px;border:1px solid #d7e2d7;background:#edf2eb;border-radius:999px}
+.membership-side-switch button{border:0;background:transparent;padding:9px 15px;border-radius:999px;color:#6e8274;font-size:11px;font-weight:800;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.membership-side-switch button.active{background:#fff;color:#173c31;box-shadow:0 2px 8px #102b2515}
+.membership-card-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.membership-card-actions .btn{min-height:39px}
+.membership-qr-shortcut{display:flex;align-items:center;gap:6px;border:0;background:transparent;margin:10px auto 0;color:#426a58;font-size:10px;font-weight:800;cursor:pointer}
+.membership-qr-modal{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:18px 10px 10px}
+.membership-qr-modal svg{padding:12px;background:#fff;border:1px solid #e2e8dd;border-radius:12px}
+.membership-qr-modal strong{color:#173c31;font-size:12px;letter-spacing:.16em}
+.membership-qr-modal p{max-width:330px;margin:0;color:#7b8e7d;font-size:11px;line-height:1.5}
+.member-card-premium{max-width:760px;margin:auto}
+.member-card-premium .page-head{margin-bottom:24px}
+.membership-card-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:30px}
+.membership-card-fact{background:#fff;border:1px solid #e3eae0;border-radius:12px;padding:16px 18px;min-width:0}
+.membership-card-fact span{display:block;color:#869889;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.membership-card-fact strong{display:block;color:#173c31;font-size:12px;overflow-wrap:anywhere}
+.member-home-card-preview{display:flex;flex-direction:column;gap:8px}
+.member-home-card-preview .membership-card-compact{max-width:265px}
+.member-home-card-preview .btn{margin-top:auto}
+.admin-member-card-preview{max-width:430px;margin:2px auto 12px}
+.cards-preview{display:grid;grid-template-columns:minmax(260px,420px) 1fr;gap:30px;align-items:center;margin-bottom:16px}
+.cards-preview .membership-card-component{max-width:420px}
+.cards-preview h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin:7px 0}
+.cards-preview p{color:#859586;font-size:11px;line-height:1.6}
+.cards-preview select{width:100%;max-width:340px;border:1px solid #dce7da;border-radius:8px;padding:10px;color:#173c31;background:#fff;font-size:11px}
+.product-grid{align-items:stretch}
+.product-card{padding:0;min-height:300px;overflow:hidden;display:flex;flex-direction:column;align-items:stretch;box-shadow:0 4px 16px #102b2508;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 15px 28px #102b2518;border-color:#cad9c9}
+.product-photo-button{display:block;position:relative;width:100%;padding:0;border:0;background:#f3f0e9;cursor:pointer;overflow:hidden;aspect-ratio:1.35}
+.product-photo-button img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.product-card:hover .product-photo-button img{transform:scale(1.045)}
+.product-card-body{display:flex;flex:1;flex-direction:column;padding:16px 17px 17px}
+.product-card-title{display:block;padding:0;border:0;background:none;color:#173c31;text-align:left;font-size:13px;font-weight:800;cursor:pointer}
+.product-card-title:hover{text-decoration:underline;text-underline-offset:3px}
+.product-card-meta{display:flex;justify-content:space-between;gap:8px;color:#8b998d;font-size:10px;margin:5px 0 17px}
+.product-card-meta .low-stock{color:#b78254}
+.product-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto}
+.product-card-price{font-size:16px;font-weight:800;color:#173c31;white-space:nowrap}
+.product-add{display:grid;place-items:center;width:31px;height:31px;border:0;border-radius:8px;background:#173c31;color:#fff;cursor:pointer;transition:background .2s,transform .2s}
+.product-add:hover:not(:disabled){background:#315e4c;transform:scale(1.07)}
+.product-add:disabled{background:#c5cfc6;cursor:not-allowed}
+.product-add-feedback{animation:product-pop .24s ease}
+@keyframes product-pop{50%{transform:scale(1.18)}}
+.cart-quantity{display:inline-block;min-width:18px;text-align:center}
+.cart-quantity.bump{animation:quantity-bump .25s ease}
+@keyframes quantity-bump{50%{transform:scale(1.22);color:#315e4c}}
+.product-detail{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:start}
+.product-detail img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;background:#f3f0e9}
+.product-detail-category{color:#a68e65;font-size:10px;letter-spacing:.16em;font-weight:800;text-transform:uppercase}
+.product-detail h3{font-family:'Cormorant Garamond',serif;color:#173c31;font-size:34px;font-weight:600;margin:8px 0}
+.product-detail-price{display:block;color:#173c31;font-size:24px;font-weight:800;margin:12px 0 22px}
+.product-detail .detail-line{margin-bottom:12px}
+.product-detail-quantity{display:flex;align-items:center;gap:14px;margin:18px 0}
+.product-detail-quantity button{width:32px;height:32px;border:1px solid #d9e3d7;background:#f7f9f5;border-radius:7px;cursor:pointer}
+.product-detail-quantity strong{font-size:14px;min-width:18px;text-align:center}
+.product-detail .btn{width:100%}
+@media(max-width:750px){.membership-card-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.cards-preview{grid-template-columns:1fr}.product-detail{grid-template-columns:1fr}.product-detail img{max-height:300px}.membership-card-actions{width:100%}}
+@media(max-width:480px){.membership-card-shell,.membership-card-flipper,.membership-card-face,.membership-card-sheen{border-radius:16px}.membership-card-facts{grid-template-columns:1fr 1fr}.membership-card-fact{padding:12px}.membership-card-actions .btn{width:100%;justify-content:center}.product-card{min-height:255px}.product-card-body{padding:12px}.product-card-title{font-size:12px}.product-card-meta{flex-direction:column;gap:2px}.product-card-price{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.membership-card-shell,.product-card,.product-photo-button img,.product-add,.cart-quantity{transition:none!important;animation:none!important}}
+.membership-print-sheet{display:none}
+@media print{body:has(>.membership-print-sheet)>:not(.membership-print-sheet){display:none!important}}
+@media print{@page{size:A4;margin:18mm}body{background:#fff!important}.membership-print-sheet{display:block!important;color:#102b25;font-family:Arial,sans-serif}.membership-print-sheet h1{font-size:14px;letter-spacing:.12em;margin:0 0 12mm}.membership-print-side{margin:0 0 12mm;break-inside:avoid}.membership-print-side span{display:block;font-size:10px;letter-spacing:.18em;margin-bottom:5mm}.membership-print-side svg{width:85.6mm;height:54mm;display:block}body:has(>.membership-print-sheet)>#root{display:none!important}}

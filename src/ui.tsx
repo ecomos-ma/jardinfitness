@@ -1,0 +1,14 @@
+import React,{useEffect} from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import {X} from 'lucide-react';
+import {useApp} from './store';
+export function Button({children,variant='primary',className='',...props}:React.ButtonHTMLAttributes<HTMLButtonElement>&{variant?:'primary'|'light'|'outline'|'danger'|'ghost'}){return <button className={`btn btn-${variant} ${className}`} {...props}>{children}</button>}
+export function Card({children,className='',...props}:React.HTMLAttributes<HTMLDivElement>){return <div className={`card ${className}`} {...props}>{children}</div>}
+export function Badge({children,tone='neutral'}:{children:React.ReactNode;tone?:'success'|'warning'|'danger'|'neutral'|'gold'}){return <span className={`badge badge-${tone}`}>{children}</span>}
+export function Field({label,children}:{label:string;children:React.ReactNode}){return <label className="field"><span>{label}</span>{children}</label>}
+export function Empty({title,body}:{title:string;body:string}){return <div className="empty"><div className="empty-mark">✦</div><strong>{title}</strong><p>{body}</p></div>}
+export function Modal({open,onOpenChange,title,children,width='560px'}:{open:boolean;onOpenChange:(x:boolean)=>void;title:string;children:React.ReactNode;width?:string}){return <Dialog.Root open={open} onOpenChange={onOpenChange}><Dialog.Portal><Dialog.Overlay className="modal-overlay"/><Dialog.Content className="modal-content" style={{maxWidth:width}}><div className="modal-head"><Dialog.Title>{title}</Dialog.Title><Dialog.Close className="icon-btn" aria-label="Fermer"><X size={18}/></Dialog.Close></div>{children}</Dialog.Content></Dialog.Portal></Dialog.Root>}
+export function Toast(){const toast=useApp(s=>s.toast),clear=useApp(s=>s.clearToast);useEffect(()=>{if(!toast)return;const t=setTimeout(clear,3800);return()=>clearTimeout(t)},[toast,clear]);return toast?<div className="toast">{toast}</div>:null}
+export function PageHead({eyebrow,title,description,actions}:{eyebrow?:string;title:string;description?:string;actions?:React.ReactNode}){return <div className="page-head"><div><div className="eyebrow">{eyebrow||'JARDIN FITNESS OS'}</div><h1>{title}</h1>{description&&<p>{description}</p>}</div>{actions&&<div className="page-actions">{actions}</div>}</div>}
+export function Table({headers,children}:{headers:string[];children:React.ReactNode}){return <div className="table-wrap"><table><thead><tr>{headers.map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{children}</tbody></table></div>}
+export function downloadCSV(name:string,rows:(string|number)[][]){const csv=rows.map(r=>r.map(v=>`"${String(v).replaceAll('"','""')}"`).join(';')).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}
